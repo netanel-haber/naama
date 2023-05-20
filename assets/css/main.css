@@ -438,10 +438,7 @@ i {
 	font-style: italic;
 }
 
-a {
-	transition: color 0.2s ease-in-out;
-	color: #98c593;
-}
+
 
 sub {
 	position: relative;
@@ -1791,13 +1788,12 @@ body.is-touch .main {
 	position: relative;
 	margin: 0;
 	line-height: 1em;
-	padding: 1.5em;
 	background: #39454b;
 	color: rgba(185, 186, 187, 0.5);
 	overflow: hidden;
 }
 
-#footer>* {
+/* #footer>* {
 	margin-bottom: 0;
 }
 
@@ -1852,7 +1848,7 @@ body.is-touch .main {
 		padding-top: 0;
 	}
 
-}
+} */
 
 /* Intro */
 
