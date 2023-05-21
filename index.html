@@ -10,6 +10,232 @@
 	<title>נעמה רודריגז</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" />
+	<style>
+		body>* {
+			background: rgba(2, 0, 36, 0.523);
+			background: linear-gradient(90deg, rgba(2, 0, 36, 0.402) 0%, rgba(86, 6, 172, 0.61) 62%, rgba(86, 1, 125, 0.778) 100%);
+		}
+
+		.main>.content {
+			width: 45em;
+			max-width: calc(100% - 4em);
+			margin: 0 auto;
+		}
+
+		.main {
+			display: -moz-flex;
+			display: -ms-flex;
+			display: flex;
+			position: relative;
+			margin: 0;
+			overflow-x: hidden;
+		}
+
+		.main>.content {
+			width: 45em;
+			max-width: calc(100% - 4em);
+			margin: 0 auto;
+		}
+
+		.main>.content> :last-child {
+			margin-bottom: 0;
+		}
+
+		.main.fullscreen {
+			min-height: 100%;
+		}
+
+		.main.style1 {
+			-moz-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			text-align: center;
+			padding: 3em 0 3em 0;
+		}
+
+		.main.style1 h2 {
+			font-size: 4.25em;
+			line-height: 1em;
+		}
+
+		.main.style1>.content {
+			transition: opacity 1s ease;
+			transform: translateZ(0);
+			opacity: 1.0;
+			margin: 0;
+		}
+
+		.main.style1.inactive>.content {
+			opacity: 0;
+		}
+
+		.main.style2 {
+			-moz-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			padding: 3em 0 3em 0;
+			overflow: hidden;
+		}
+
+		.main.style2>.content {
+			transition: transform 1s ease;
+			transform: translateZ(0);
+			position: relative;
+			width: 35%;
+			margin: 0;
+		}
+
+		.main.style2.left {
+			-moz-justify-content: -moz-flex-start;
+			-ms-justify-content: -ms-flex-start;
+			justify-content: flex-start;
+		}
+
+		.main.style2.right {
+			-moz-justify-content: -moz-flex-end;
+			-ms-justify-content: -ms-flex-end;
+			justify-content: flex-end;
+		}
+
+		.main.style2.inactive.left>.content {
+			transform: translateX(100%);
+		}
+
+		.main.style2.inactive.right>.content {
+			transform: translateX(-100%);
+		}
+
+		.main.style3 {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		}
+
+		.main.style3 .content>header {
+			margin-bottom: 2em;
+		}
+
+		.main.style3.primary {
+			background: #ffffff;
+		}
+
+		.main.style3.secondary {
+			background: #f5f6f7;
+		}
+
+		.main.dark {
+			color: #ffffff;
+		}
+
+		.main.dark a {
+			color: inherit;
+		}
+
+		.main.dark .button.style2 {
+			border-color: #ffffff;
+		}
+
+		.main.dark .button.style2:hover {
+			background-color: rgba(255, 255, 255, 0.125);
+		}
+
+		.main.dark .button.style2:active {
+			background-color: rgba(255, 255, 255, 0.25);
+		}
+
+		.main.dark .button.style2.down {
+			background-image: url("images/dark-arrow.svg");
+		}
+
+		body.is-touch .main {
+			background-attachment: scroll !important;
+		}
+
+		@media screen and (max-width: 1920px) {
+
+			.main.style2 .content {
+				width: 40%;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.main.style2 .content {
+				width: 50%;
+			}
+
+		}
+
+		@media screen and (max-width: 1000px) {
+
+			.main.style2 .content {
+				width: 60%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.main>.content br {
+				display: none;
+			}
+
+			.main.fullscreen {
+				height: auto !important;
+			}
+
+			.main.style1 {
+				padding: 4em 15px 4em 15px;
+			}
+
+			.main.style1 h2 {
+				font-size: 3em;
+			}
+
+			.main.style2 {
+				padding: 6em 15px 6em 15px;
+			}
+
+			.main.style2:before,
+			.main.style2:after {
+				display: none !important;
+			}
+
+			.main.style2 .button.anchored {
+				display: none;
+			}
+
+			.main.style2 .content {
+				width: 100%;
+				max-width: 100%;
+				text-align: center;
+				transform: none;
+			}
+
+			.main.style3 {
+				text-align: center;
+				padding: 3em 10px 3em 10px;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.main>.content {
+				max-width: calc(100% - 1.5em);
+			}
+
+		}
+	</style>
+	<!-- Tailwind recommends adding script to <head> -->
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -17,20 +243,6 @@
 </head>
 
 <body>
-
-	<!-- Header -->
-	<!-- <header id="header">
-		<h1>נעמה רודריגז</h1>
-		<nav>
-			<ul>
-				<li><a href="#standup">סטנדאפיסטית</a></li>
-				<li><a href="#actress">שחקנית</a></li>
-				<li><a href="#dubbing">מדבבת</a></li>
-				<li><a href="#tickets">כרטיסים להופעות</a></li>
-			</ul>
-		</nav>
-	</header> -->
-
 	<section id="standup" class="main dark fullscreen pb-4">
 		<div class="content p-1">
 			<div class="flex flex-col md:flex-row my-4 gap-3 items-center relative">
@@ -54,7 +266,7 @@
 								class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
 					</ul>
 				</div>
-				<img style="height: 700px" src="images/naama.png" class="md:w-auto" />
+				<img style="height: 650px" src="images/naama.webp" class="md:w-auto" />
 			</div>
 
 			<div class="grid grid-cols-1 sm:grxid-cols-2 my-2 gap-2 w-full">
@@ -76,85 +288,15 @@
 				ועל מי שנקרה בדרכה.</p>
 			<div class="my-2">
 				<a class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded"
-					href=“tel:0723922534”>072-392-2534</a>בוא נדבר!
+					href="tel:0723922534">072-392-2534</a>בוא נדבר!
 			</div>
 
 
 		</div>
 	</section>
-	<!-- 
-	<section id="actress" class="main style2 right dark fullscreen">
-		<div class="content box style2">
-			<header>
-				<h2>What I Do</h2>
-			</header>
-			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-				Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-				id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-		</div>
-		<a href="#dubbing" class="button style2 down anchored">Next</a>
-	</section>
 
-	<section id="dubbing" class="main style2 left dark fullscreen">
-		<div class="content box style2">
-			<header>
-				<h2>Who I Am</h2>
-			</header>
-			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-				Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-				id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-		</div>
-		<a href="#tickets" class="button style2 down anchored">Next</a>
-	</section> -->
-	<!-- 
-	<section id="tickets" class="main style3 primary">
-		<div class="content">
-			<header>
-				<h2>My Work</h2>
-				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-					arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
-			</header>
-
-
-			<div class="gallery">
-				<article class="from-left">
-					<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg"
-							title="The Anonymous Red" alt="" /></a>
-				</article>
-				<article class="from-right">
-					<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg"
-							title="Airchitecture II" alt="" /></a>
-				</article>
-				<article class="from-left">
-					<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge"
-							alt="" /></a>
-				</article>
-				<article class="from-right">
-					<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on"
-							alt="" /></a>
-				</article>
-				<article class="from-left">
-					<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg"
-							title="The sparkling shell" alt="" /></a>
-				</article>
-				<article class="from-right">
-					<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX"
-							alt="" /></a>
-				</article>
-			</div>
-
-		</div>
-	</section> -->
-
-	<!-- Footer -->
 	<footer id="footer">
-
-		<!-- Icons -->
 		<div class="py-1 w-full text-center">עיצוב: <a href="https://html5up.net">HTML5 UP</a></div>
-
-		<!-- Menu -->
-
 	</footer>
 
 	<!-- Scripts -->
@@ -166,7 +308,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="https://cdn.tailwindcss.com"></script>
 	<script async data-id="101410794" src="//static.getclicky.com/js"></script>
 </body>
 
